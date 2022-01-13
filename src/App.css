@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  color: rgb(150,150,150);
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-size: 14px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::placeholder{
+  color: rgb(150,150,150);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body, .container, header, form, .task, .section-tasks{
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+body{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+.strike{
+  text-decoration: line-through;
+  opacity: .5;
+}
+.container{
+  width: 300px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 1rem;
+  padding: .75rem;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+}
+header, footer, .section-tasks, .task{
+  width: 100%;
+}
+header, form{
+  justify-content: space-between;
+}
+header > p{
+  font-size: 16px;
+  font-weight: 700;
+}
+header span{
+  font-weight: 300;
+  color: rgb(150,150,150);
+}
+.task{
+  justify-content: space-evenly;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  border: none;
+  padding: .25rem 0;
+  margin: .25rem 0;
+  width: 95%;
+  border-radius: .5rem;
+}
+.section-tasks{
+  height: 80%;
+  flex-direction: column;
+  overflow: scroll;
+}
+.section-tasks::-webkit-scrollbar{
+  width: 0;
+}
+.task > p{
+  width: 70%;
+  overflow-wrap: break-word;
+  letter-spacing: .25px;
+}
+.task > p::first-letter{
+  text-transform: uppercase;
+}
+.btn, input{
+  border: none;
+  outline: none;
+}
+.btn-clear-all{
+  padding: 0 .5rem;
+  border-radius: 1rem;
+  letter-spacing: .5px;
+  font-size: 12px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn{
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task > .btn, form > .btn{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.btn-done{
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  transform: scaleX(-1) rotate(-45deg);
+  transition: all 1s ease-in-out;
+}
+.btn-delete{
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  transform: rotate(45deg);
+  transition: all 1s ease-in-out;
+}
+.btn-add, .btn-delete, .btn-done{
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+  border-radius: 50%;
+  font-weight: 400;
+}
+.btn-add, .btn-clear-all{
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+.btn-add, .btn-delete{
+  font-size: 16px;
 }
