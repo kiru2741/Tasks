@@ -16,7 +16,7 @@ body, .container, header, form, .task, .section-tasks{
 body{
   justify-content: center;
   min-height: 100vh;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to top right, #fbc2eb 0%, #a6c1ee 100%);
 }
 .strike{
   text-decoration: line-through;
@@ -37,6 +37,9 @@ header, footer, .section-tasks, .task{
 }
 header, form{
   justify-content: space-between;
+}
+form > input[type="text"]{
+  width: 85%;
 }
 header > p{
   font-size: 16px;
@@ -108,7 +111,7 @@ header span{
   font-weight: 400;
 }
 .btn-add, .btn-clear-all{
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: linear-gradient(to bottom left, #fbc2eb 0%, #a6c1ee 100%);
 }
 .btn-add, .btn-delete{
   font-size: 16px;
